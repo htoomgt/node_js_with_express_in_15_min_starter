@@ -1,0 +1,22 @@
+GET http://localhost:3000
+
+### get products
+GET http://localhost:3000/products
+
+### get a product 1
+GET http://localhost:3000/product/1
+
+### get a product 2
+GET http://localhost:3000/product/2
+
+
+### add product
+POST http://localhost:3000/add_product
+Content-Type: application/json
+
+{
+  "id": 5,
+  "name" : "test"
+}
+
+
