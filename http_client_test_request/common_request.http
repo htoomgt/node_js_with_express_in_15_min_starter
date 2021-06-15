@@ -19,4 +19,11 @@ Content-Type: application/json
   "name" : "test"
 }
 
+### test request
+GET https://jsonplaceholder.typicode.com/todos/1
+
+### test curl request
+curl https://jsonplaceholder.typicode.com/todos/1
+
+
 
