@@ -1,6 +1,12 @@
 import Products from "../store/products.js";
 
 class ProductController {
+    /***
+     * To get all products by request
+     * @author Htoo Maung Thait
+     * @parm req, res 
+     * @return products json
+     */
     getProuducts(req, res) {
         console.log(Products);
         return res.json(Products);
