@@ -1,18 +1,28 @@
-GET http://localhost:3000
+@hostname = localhost
+@port = 3000
+@host = {{hostname}}:{{port}}
+@defaultBaseURL = http://{{host}}
+
+@defaultContentType = application/json
+@createdAt = {{$datetime iso8601}}
+@modifiedBy = {{$processEnv USERNAME}}
+
+### home
+GET {{defaultBaseURL}}
 
 ### get products
-GET http://localhost:3000/products
+GET {{defaultBaseURL}}/products
 
 ### get a product 1
-GET http://localhost:3000/product/1
+GET {{defaultBaseURL}}/product/1
 
 ### get a product 2
-GET http://localhost:3000/product/2
+GET {{defaultBaseURL}}/product/2
 
 
 ### add product
-POST http://localhost:3000/add_product
-Content-Type: application/json
+POST {{defaultBaseURL}}/add_product
+Content-Type: {{defaultContentType}}
 
 {
   "id": 5,
